@@ -9,7 +9,11 @@
     <Window.Resources>
         <Style x:Key="GridStyle1" TargetType="{x:Type Grid}"/>
     </Window.Resources>
-    <Grid x:Name="FileName" Style="{DynamicResource GridStyle1}" Cursor="">
+    <Grid x:Name="FileName" Style="{DynamicResource GridStyle1}" Cursor="" Margin="0,0,0,-85">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
         <Button x:Name="OpenFile" Content="Open File" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Margin="3,9,0,0" RenderTransformOrigin="0.5,0.5" Height="25" Click="button_Click">
             <Button.RenderTransform>
                 <TransformGroup>
@@ -22,17 +26,17 @@
         </Button>
         <TextBox x:Name="FileBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" Margin="143,10,0,0" SpellCheck.IsEnabled="True" TextChanged="textBox_TextChanged"/>
         <TextBox x:Name="SizeBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Margin="190,70,0,0"/>
-        <Label x:Name="Size" Content="Size of file" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,67,0,0" Width="138"/>
+        <Label x:Name="Size" Content="Size of file" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,67,0,0" Width="138" Height="26"/>
         <TextBox x:Name="FrameBox" HorizontalAlignment="Left" Height="23" Margin="190,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
         <TextBox x:Name="ButeSize" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Margin="190,165,0,0"/>
-        <Label x:Name="Pixels" Content="Number of Pixels" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,114,0,0" Width="138"/>
-        <Label x:Name="Butes" Content="Number of Butes" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.105,-0.269" Width="138"/>
+        <Label x:Name="Pixels" Content="Number of Pixels" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,114,0,0" Width="138" Height="26"/>
+        <Label x:Name="Butes" Content="Number of Butes" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.105,-0.269" Width="138" Height="26"/>
         <TextBox x:Name="OpenData" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Margin="190,205,0,0"/>
-        <Label x:Name="label" Content="Last Change Time" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,202,0,0" Width="137"/>
+        <Label x:Name="label" Content="Last Change Time" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,202,0,0" Width="137" Height="26"/>
         <TextBox x:Name="LastAccess" HorizontalAlignment="Left" Height="23" Margin="190,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
-        <Label Content="Create Time" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,244,0,0" Width="137"/>
-        <TextBox x:Name="ReadOnly" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Margin="190,287,0,0"/>
-        <Label x:Name="label1" Content="Read Only" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,284,0,0" Height="26" Width="137"/>
+        <Label Content="Create Time" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,244,0,0" Width="137" Height="26"/>
+        <TextBox x:Name="ImgType" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Margin="190,287,0,0"/>
+        <Label x:Name="label1" Content="Type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,284,0,0" Height="26" Width="137"/>
 
     </Grid>
 </Window>

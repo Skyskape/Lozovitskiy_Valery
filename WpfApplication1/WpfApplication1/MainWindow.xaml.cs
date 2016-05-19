@@ -14,13 +14,13 @@ namespace WpfApplication1
         }
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog(); 
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
             dlg.DefaultExt = ".png";
             dlg.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg";
             Nullable<bool> result = dlg.ShowDialog();
-            
+
             if (result == true)
-            { 
+            {
                 string filename = dlg.FileName;
                 FileBox.Text = filename;
             }
@@ -46,10 +46,11 @@ namespace WpfApplication1
             string data1 = pf.CreationTime.ToShortDateString() + " " + pf.CreationTime.ToLongTimeString();
             LastAccess.Text = data1;
 
-            //только для чтения
-            bool a = pf.IsReadOnly;
-            ReadOnly.Text = a.ToString();
+            //тип изображения
+            var Type = pf.Extension;
+            ImgType.Text = Type.ToString();
         }
+
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
